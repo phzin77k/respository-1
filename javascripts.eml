@@ -1,0 +1,230 @@
+Delivered-To: cruzpedrocruz013@gmail.com
+Received: by 2002:ab3:5084:0:b0:2c5:5c36:c15c with SMTP id e4csp5977146lte;
+        Thu, 16 Oct 2025 05:17:52 -0700 (PDT)
+X-Received: by 2002:a05:690c:5807:b0:781:64f:2b50 with SMTP id 00721157ae682-781064f3696mr180805927b3.63.1760617071946;
+        Thu, 16 Oct 2025 05:17:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1760617071; cv=none;
+        d=google.com; s=arc-20240605;
+        b=H2KHQBeoQNj0DWfyYCTE7bdku9d+x/55fzNuH0/IH46UsPHbMeGQoWEuCCDDRTO3pZ
+         3lib15NiM9tjEq09s3uRvs0bJxXshBhz/fGFuIh/sGSliCKNQa9gyBL1/XlIh4I1GHKH
+         pJp82NuhD7y5TQZs1peJ/FJ45KGKN43brKqgOQsmZL6NuL07m+4ljmC3GkzjGF/TdwT1
+         Lcs9JIynfsT6heW8j5k4xOAUOTheZ4qAeatKG6Xer2KBKyndSnM+4RVO7wTHKyKelwY/
+         XxIKRBk/oPi/pMqzGdQUPajepf9GqbZX3m5T2To2R5CMUA+V8+vc74w8zbag4FW3rBFW
+         H76w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :dkim-signature;
+        bh=xl6QMbUUj9WeRymIxORoRfpYUMBw/0SgmTPrfN2nFYw=;
+        fh=Zssok33iLXrpbWW+XQaWvEdqKLcYxVHCZTfTu4+qhqA=;
+        b=gC6LWdilWV9CJVVWiVv4DFJRVMDhwekWKB1NE0++4n3q46iTa1pvOt8FyteWFQJMnm
+         A+5Xn9hi83eAkBcarkiVSqsuvaKqacyJV7JJ02yhFHLlI9q1e/2SwwnHXzWyk4p/+gM2
+         qBTPLGKmuzrvA6jcfYyEICqTzxxruOukXcHrRrNWp7YCLp62coWabmC+HGZeTIqlbeKq
+         uc1GnXL4jQSrRjMvbwLSv25YUHROvhVZmEMaF33/Z649C85WSvmrr0MBmeUk4k+rQ3Fq
+         8OWIs6yH81gMnvF2l13KseT/kIYNUZp62NgCVTdV0ZqYFxiCRWD0fMwFk1+daJXIOlq1
+         CNww==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KA9lzvSx;
+       spf=pass (google.com: domain of gustalegal12@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=gustalegal12@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <gustalegal12@gmail.com>
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 00721157ae682-78106ddc08asor117967087b3.6.2025.10.16.05.17.51
+        for <cruzpedrocruz013@gmail.com>
+        (Google Transport Security);
+        Thu, 16 Oct 2025 05:17:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of gustalegal12@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=KA9lzvSx;
+       spf=pass (google.com: domain of gustalegal12@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=gustalegal12@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1760617071; x=1761221871; dara=google.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=xl6QMbUUj9WeRymIxORoRfpYUMBw/0SgmTPrfN2nFYw=;
+        b=KA9lzvSx9F8X9lqfIFXgnSWZ2I7lZbz29DwD0q3vqmjOviVJFCPVsJ+nIfxhesdv/K
+         Qdp+8Y3HQ01wm30EZrJ4cyLtrClKV7sPtINcyMRgNqMWQX76u6W+FbW6ME6vmRQ5gShq
+         N+Byad0+m47L5jzWEL705J5aFVhvhsxf3YX5gb+TKdN5oW5kcucw0ZYqhgdzUcpyKZr9
+         xkht6pEAsADALlxRkRnfbq7y5uvK510kggvbzOnSEjyT0Gbhh5DoX5Lq2QTVOZT4WNn4
+         NBuG2c1cgt+UVoJuiq36uWjwpgin6crp5CnYXZQb+K70m/sxJD3fYRtlpJy27ddU3EcM
+         a3yw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1760617071; x=1761221871;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=xl6QMbUUj9WeRymIxORoRfpYUMBw/0SgmTPrfN2nFYw=;
+        b=RkY9WpHlJFXA3ld+7eYDsenIDohdHeaeKrXco/Hxte6E6CgPYQzfAH1HoTaVOTOq/R
+         hUHpnUlG25co1X+2U8ohYIONcWKp2biij64zGQ+q7pu1PAI2738QaPaxcGg38eFevmFc
+         tdYNdv4Z9j/UZ1uFbRZe4jNg05rqfNl3VmMfFlV+sSXMNOrTQUoMIdaQSxCjNGrS8hcc
+         XpcE0LZsMFVGov0sRRXAa0ipr0rsc146s9R0+Ydk10QWtO/+bRQYoYMwdN3YlE1/0RKk
+         7+xeWZLbrPecCC13hLKV6Sf6uKbdgTfeY4hj+mmC/ESrNpj7dS0Px5+gVyrB3LiNc+3F
+         ahGw==
+X-Gm-Message-State: AOJu0YzBmnhyo5WgIFPCRq+AQM4FFQgXeoMFW0BldqdLl2mN/7D35Xvg
+	A3Yp93ptj//Y9nL2k7DoaPkjFowTqA7/XIxqDKMlJB0TxqmeFPvb/W1TREQPeIydI8RDHLtAB48
+	WUT6Ytt6qrBGh0pLgmk3fI9Rm0nIOJwTzGQ==
+X-Gm-Gg: ASbGnctjoD87BfoeMNE/pAFBHjj2cSwiE7nD6SuY8h36R1Enq8ovMqvqX/pOY/e5P75
+	lxFVQDI1XVsNbVuNTTNai4WHV3NkRaQUJle3woPDj3+juGQHWCgEqWHVxcumNedyg75gOL/gW2e
+	GzQZs+lL1jO4UzWrEGBaRT6wpoj8lw7sqmmfM1c+1stvVvqn0FUF/FnnL7sDYRDkaaM2hacMLLM
+	Uf5RszoZ2+DIyU4UUsMU5Lob/IlZnHme8H8EcxdOgr94wJ1T63LN+1tpGU5
+X-Google-Smtp-Source: AGHT+IGAFF2N5Od8rM0ysj3143/tgjzCbqFMh+LTKHd99jBPkFIbY63h4Q4lMpv/+AiMVG/c/6EiKTTqXgXTHyjTzbs=
+X-Received: by 2002:a05:690e:d5b:b0:63e:c5e:5e60 with SMTP id
+ 956f58d0204a3-63e0c5e5f10mr1483126d50.48.1760617071313; Thu, 16 Oct 2025
+ 05:17:51 -0700 (PDT)
+MIME-Version: 1.0
+References: <CABiP=6JyWLSD0UmNDpdtT1CL6co3mdhK3M9otHYRPL8zsC5EWg@mail.gmail.com>
+In-Reply-To: <CABiP=6JyWLSD0UmNDpdtT1CL6co3mdhK3M9otHYRPL8zsC5EWg@mail.gmail.com>
+From: Gugu Henri <gustalegal12@gmail.com>
+Date: Thu, 16 Oct 2025 09:17:40 -0300
+X-Gm-Features: AS18NWBgVcU1ww0NQSr-_x_ChaPrpjLFdd0IvUtebN0CSP43hId4QAfylzPH0h0
+Message-ID: <CABiP=6JaV2QFCLnKWibUokfjdF_tDZ9xC5rO5ANUp7EkTExCug@mail.gmail.com>
+Subject: Fwd: javascripts
+To: cruzpedrocruz013@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000001f07c40641459b7f"
+
+--0000000000001f07c40641459b7f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+---------- Forwarded message ---------
+De: Gugu Henri <gustalegal12@gmail.com>
+Date: qua., 23 de jul. de 2025 =C3=A0s 08:15
+Subject: javascripts
+To: <cruzpedrocruz013@gmail.com>
+
+
+function calcular() {
+    const v1 =3D parseFloat(document.getElementById("valor1").value);
+    const v2 =3D parseFloat(document.getElementById("valor2").value);
+    const op =3D document.getElementById("operacao").value;
+    let resultado;
+
+    if (isNaN(v1) || isNaN(v2)) {
+        alert("Por favor, insira n=C3=BAmeros v=C3=A1lidos.");
+        return;
+    }
+
+    switch(op) {
+        case '+':
+            resultado =3D v1 + v2;
+            break;
+        case '-':
+            resultado =3D v1 - v2;
+            break;
+        case '*':
+            resultado =3D v1 * v2;
+            break;
+        case '/':
+            if (v2 =3D=3D=3D 0) {
+                alert("Divis=C3=A3o por zero n=C3=A3o =C3=A9 permitida.");
+                return;
+            }
+            resultado =3D v1 / v2;
+            break;
+        default:
+            alert("Opera=C3=A7=C3=A3o inv=C3=A1lida.");
+            return;
+    }
+
+    alert("Resultado: " + resultado);
+}
+
+--0000000000001f07c40641459b7f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><br><br><div class=3D"gmail_quote gmail_quote_container"><=
+div dir=3D"ltr" class=3D"gmail_attr">---------- Forwarded message ---------=
+<br>De: <strong class=3D"gmail_sendername" dir=3D"auto">Gugu Henri</strong>=
+ <span dir=3D"auto">&lt;<a href=3D"mailto:gustalegal12@gmail.com">gustalega=
+l12@gmail.com</a>&gt;</span><br>Date: qua., 23 de jul. de 2025 =C3=A0s 08:1=
+5<br>Subject: javascripts<br>To:  &lt;<a href=3D"mailto:cruzpedrocruz013@gm=
+ail.com">cruzpedrocruz013@gmail.com</a>&gt;<br></div><br><br><div dir=3D"lt=
+r"><div style=3D"color:rgb(204,204,204);background-color:rgb(31,31,31);font=
+-family:Consolas,&quot;Courier New&quot;,monospace;font-size:14px;line-heig=
+ht:19px;white-space:pre-wrap"><div><span style=3D"color:rgb(86,156,214)">fu=
+nction</span> <span style=3D"color:rgb(220,220,170)">calcular</span>() {</d=
+iv><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(86,156,214)">const</span> <s=
+pan style=3D"color:rgb(79,193,255)">v1</span> <span style=3D"color:rgb(212,=
+212,212)">=3D</span> <span style=3D"color:rgb(220,220,170)">parseFloat</spa=
+n>(<span style=3D"color:rgb(156,220,254)">document</span>.<span style=3D"co=
+lor:rgb(220,220,170)">getElementById</span>(<span style=3D"color:rgb(206,14=
+5,120)">&quot;valor1&quot;</span>).<span style=3D"color:rgb(156,220,254)">v=
+alue</span>);</div><div>=C2=A0 =C2=A0 <span style=3D"color:rgb(86,156,214)"=
+>const</span> <span style=3D"color:rgb(79,193,255)">v2</span> <span style=
+=3D"color:rgb(212,212,212)">=3D</span> <span style=3D"color:rgb(220,220,170=
+)">parseFloat</span>(<span style=3D"color:rgb(156,220,254)">document</span>=
+.<span style=3D"color:rgb(220,220,170)">getElementById</span>(<span style=
+=3D"color:rgb(206,145,120)">&quot;valor2&quot;</span>).<span style=3D"color=
+:rgb(156,220,254)">value</span>);</div><div>=C2=A0 =C2=A0 <span style=3D"co=
+lor:rgb(86,156,214)">const</span> <span style=3D"color:rgb(79,193,255)">op<=
+/span> <span style=3D"color:rgb(212,212,212)">=3D</span> <span style=3D"col=
+or:rgb(156,220,254)">document</span>.<span style=3D"color:rgb(220,220,170)"=
+>getElementById</span>(<span style=3D"color:rgb(206,145,120)">&quot;operaca=
+o&quot;</span>).<span style=3D"color:rgb(156,220,254)">value</span>;</div><=
+div>=C2=A0 =C2=A0 <span style=3D"color:rgb(86,156,214)">let</span> <span st=
+yle=3D"color:rgb(156,220,254)">resultado</span>;</div><br><div>=C2=A0 =C2=
+=A0 <span style=3D"color:rgb(197,134,192)">if</span> (<span style=3D"color:=
+rgb(220,220,170)">isNaN</span>(<span style=3D"color:rgb(79,193,255)">v1</sp=
+an>) <span style=3D"color:rgb(212,212,212)">||</span> <span style=3D"color:=
+rgb(220,220,170)">isNaN</span>(<span style=3D"color:rgb(79,193,255)">v2</sp=
+an>)) {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(220,=
+220,170)">alert</span>(<span style=3D"color:rgb(206,145,120)">&quot;Por fav=
+or, insira n=C3=BAmeros v=C3=A1lidos.&quot;</span>);</div><div>=C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(197,134,192)">return</span>;</di=
+v><div>=C2=A0 =C2=A0 }</div><br><div>=C2=A0 =C2=A0 <span style=3D"color:rgb=
+(197,134,192)">switch</span>(<span style=3D"color:rgb(79,193,255)">op</span=
+>) {</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(197,134=
+,192)">case</span> <span style=3D"color:rgb(206,145,120)">&#39;+&#39;</span=
+>:</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color=
+:rgb(156,220,254)">resultado</span> <span style=3D"color:rgb(212,212,212)">=
+=3D</span> <span style=3D"color:rgb(79,193,255)">v1</span> <span style=3D"c=
+olor:rgb(212,212,212)">+</span> <span style=3D"color:rgb(79,193,255)">v2</s=
+pan>;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"co=
+lor:rgb(197,134,192)">break</span>;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <=
+span style=3D"color:rgb(197,134,192)">case</span> <span style=3D"color:rgb(=
+206,145,120)">&#39;-&#39;</span>:</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <span style=3D"color:rgb(156,220,254)">resultado</span> <span st=
+yle=3D"color:rgb(212,212,212)">=3D</span> <span style=3D"color:rgb(79,193,2=
+55)">v1</span> <span style=3D"color:rgb(212,212,212)">-</span> <span style=
+=3D"color:rgb(79,193,255)">v2</span>;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 <span style=3D"color:rgb(197,134,192)">break</span>;</div><d=
+iv>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(197,134,192)">case<=
+/span> <span style=3D"color:rgb(206,145,120)">&#39;*&#39;</span>:</div><div=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(156,220=
+,254)">resultado</span> <span style=3D"color:rgb(212,212,212)">=3D</span> <=
+span style=3D"color:rgb(79,193,255)">v1</span> <span style=3D"color:rgb(212=
+,212,212)">*</span> <span style=3D"color:rgb(79,193,255)">v2</span>;</div><=
+div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(197,=
+134,192)">break</span>;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=
+=3D"color:rgb(197,134,192)">case</span> <span style=3D"color:rgb(206,145,12=
+0)">&#39;/&#39;</span>:</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=
+ <span style=3D"color:rgb(197,134,192)">if</span> (<span style=3D"color:rgb=
+(79,193,255)">v2</span> <span style=3D"color:rgb(212,212,212)">=3D=3D=3D</s=
+pan> <span style=3D"color:rgb(181,206,168)">0</span>) {</div><div>=C2=A0 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(2=
+20,220,170)">alert</span>(<span style=3D"color:rgb(206,145,120)">&quot;Divi=
+s=C3=A3o por zero n=C3=A3o =C3=A9 permitida.&quot;</span>);</div><div>=C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:r=
+gb(197,134,192)">return</span>;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 }</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span styl=
+e=3D"color:rgb(156,220,254)">resultado</span> <span style=3D"color:rgb(212,=
+212,212)">=3D</span> <span style=3D"color:rgb(79,193,255)">v1</span> <span =
+style=3D"color:rgb(212,212,212)">/</span> <span style=3D"color:rgb(79,193,2=
+55)">v2</span>;</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span s=
+tyle=3D"color:rgb(197,134,192)">break</span>;</div><div>=C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 <span style=3D"color:rgb(197,134,192)">default</span>:</div><div=
+>=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(220,220=
+,170)">alert</span>(<span style=3D"color:rgb(206,145,120)">&quot;Opera=C3=
+=A7=C3=A3o inv=C3=A1lida.&quot;</span>);</div><div>=C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 <span style=3D"color:rgb(197,134,192)">return</span>;</di=
+v><div>=C2=A0 =C2=A0 }</div><br><div>=C2=A0 =C2=A0 <span style=3D"color:rgb=
+(220,220,170)">alert</span>(<span style=3D"color:rgb(206,145,120)">&quot;Re=
+sultado: &quot;</span> <span style=3D"color:rgb(212,212,212)">+</span> <spa=
+n style=3D"color:rgb(156,220,254)">resultado</span>);</div><div>}</div></di=
+v></div>
+</div></div>
+
+--0000000000001f07c40641459b7f--
